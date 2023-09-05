@@ -5,5 +5,6 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN yum install httpd -y
 WORKDIR /var/www/html/
 RUN echo "Hello world" > index.html
+RUN echo "Hello Everyone" > index.html
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
